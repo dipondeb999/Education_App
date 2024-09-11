@@ -227,7 +227,11 @@ class HomeScreen extends StatelessWidget {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => CourseScreen(imagesTitle[index])));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => CourseScreen(
+              imagesTitle[index],
+              imageList[index],
+              totalVideos[index],
+            )));
           },
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
