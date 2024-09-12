@@ -1,3 +1,5 @@
+import 'package:education_app/presentation/widgets/Description_section.dart';
+import 'package:education_app/presentation/widgets/video_section.dart';
 import 'package:flutter/material.dart';
 
 class CourseScreen extends StatefulWidget {
@@ -50,6 +52,8 @@ class _CourseScreenState extends State<CourseScreen> {
             const SizedBox(height: 20),
             // build buttonBar
             _buildButtonBar(),
+            const SizedBox(height: 10),
+            isVideoSection ? const VideoSection() : const DescriptionSection(),
           ],
         ),
       ),
